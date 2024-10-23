@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Entrenador {
 
 	private Equipo equipo;
@@ -5,40 +8,28 @@ public class Entrenador {
 	private int tiempoDeExperencia;
 	private String deporteEspecializacion;
 
+	Entrenador(Equipo equipo, String nombre, int tiempoDeExperencia,
+               String deporteEspecializacion) {
+		this.equipo = equipo;
+		this.nombre = nombre;
+		this.tiempoDeExperencia = tiempoDeExperencia;
+		this.deporteEspecializacion = deporteEspecializacion;
+	}
+
+	private List<Entrenador> entrenadores = new ArrayList<>();
+
 	public String getNombre() {
 		return this.nombre;
 	}
 
-	/**
-	 * 
-	 * @param nombre
-	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getCorreoElectronico() {
-		// TODO - implement Entrenador.getCorreoElectronico
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param correoElectronico
-	 */
-	public void setCorreoElectronico(String correoElectronico) {
-		// TODO - implement Entrenador.setCorreoElectronico
-		throw new UnsupportedOperationException();
 	}
 
 	public int getTiempoDeExperencia() {
 		return this.tiempoDeExperencia;
 	}
 
-	/**
-	 * 
-	 * @param tiempoDeExperencia
-	 */
 	public void setTiempoDeExperencia(int tiempoDeExperencia) {
 		this.tiempoDeExperencia = tiempoDeExperencia;
 	}
@@ -47,12 +38,17 @@ public class Entrenador {
 		return this.deporteEspecializacion;
 	}
 
-	/**
-	 * 
-	 * @param deporteEspecializacion
-	 */
 	public void setDeporteEspecializacion(String deporteEspecializacion) {
 		this.deporteEspecializacion = deporteEspecializacion;
 	}
 
+	public boolean registrarEntrenador() {
+		for (Entrenador entrenador : entrenadores) {
+			if (entrenador.getNombre().equals(this.nombre)) {
+				return false;
+			}
+		}
+		entrenadores.add(this);
+		return true;
+	}
 }

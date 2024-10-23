@@ -5,8 +5,8 @@ public class Cancha {
 	private String ubicacion;
 	private int capacidadEspectadores;
 
-	public Cancha(Partido partido, String superficie, String ubicacion,
-				  int capacidadEspectadores) { // Inicializando un constructor
+	Cancha(Partido partido, String superficie, String ubicacion,
+           int capacidadEspectadores) { // Inicializando un constructor
 		this.partido = partido;
 		this.superficie = superficie;
 		this.ubicacion = ubicacion;
@@ -50,14 +50,23 @@ public class Cancha {
 		return true;
 	}
 
-	public String obtenerDisponibilidad() {
-		// TODO - implement Cancha.obtenerDisponibilidad
-		throw new UnsupportedOperationException();
+	public boolean obtenerDisponibilidad(Cancha cancha) {
+		if (cancha.partido == null) {
+			System.out.println("Esta cancha se encuentra disponible");
+			return true;
+		}
+		System.out.println("Esta cancha no se encuentra disponible");
+		return false;
 	}
 
-	public boolean registrarUsoCanca() {
-		// TODO - implement Cancha.registrarUsoCanca
-		throw new UnsupportedOperationException();
+	public boolean registrarUsoCancha(Cancha cancha) {
+		if (cancha.partido != null) {
+			System.out.println("No es posible registrar el uso de esta cancha");
+			return false;
+		} else {
+			System.out.println("Uso de la cancha registrada");
+		}
+		return true;
 	}
 
 }
