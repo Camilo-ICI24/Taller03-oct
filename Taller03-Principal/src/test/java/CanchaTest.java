@@ -35,30 +35,30 @@ class CanchaTest {
     }
 
     @Test
-    public void testSetUbicacion() {
+    void testSetUbicacion() {
         cancha.setUbicacion("Estadio Sur");
         assertEquals("Estadio Sur", cancha.getUbicacion());
     }
 
     @Test
-    public void testGetCapacidadEspectadores() {
+    void testGetCapacidadEspectadores() {
         assertEquals(420000, cancha.getCapacidadEspectadores());
     }
 
     @Test
-    public void testSetCapacidadEspectadores() {
+    void testSetCapacidadEspectadores() {
         cancha.setCapacidadEspectadores(60000);
         assertEquals(60000, cancha.getCapacidadEspectadores());
     }
 
     @Test
-    public void testProgramarPartidoCanchaOcupada() {
+    void testProgramarPartidoCanchaOcupada() {
         boolean resultado = cancha.programarPartido(partido2, cancha);
         assertFalse(resultado);
     }
 
     @Test
-    public void testProgramarPartidoCanchaLibre() {
+    void testProgramarPartidoCanchaLibre() {
         Cancha nuevaCancha = new Cancha(null, "Sintético",
                 "Estadio Monumental", 40000);
         boolean resultado = nuevaCancha.programarPartido(partido2, nuevaCancha);

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Entrenador {
 
 	private Equipo equipo;
@@ -5,13 +8,15 @@ public class Entrenador {
 	private int tiempoDeExperencia;
 	private String deporteEspecializacion;
 
-	private Entrenador(Equipo equipo, String nombre, int tiempoDeExperencia,
-					   String deporteEspecializacion) {
+	Entrenador(Equipo equipo, String nombre, int tiempoDeExperencia,
+               String deporteEspecializacion) {
 		this.equipo = equipo;
 		this.nombre = nombre;
 		this.tiempoDeExperencia = tiempoDeExperencia;
 		this.deporteEspecializacion = deporteEspecializacion;
 	}
+
+	private List<Entrenador> entrenadores = new ArrayList<>();
 
 	public String getNombre() {
 		return this.nombre;
@@ -37,4 +42,13 @@ public class Entrenador {
 		this.deporteEspecializacion = deporteEspecializacion;
 	}
 
+	public boolean registrarEntrenador() {
+		for (Entrenador entrenador : entrenadores) {
+			if (entrenador.getNombre().equals(this.nombre)) {
+				return false;
+			}
+		}
+		entrenadores.add(this);
+		return true;
+	}
 }

@@ -9,14 +9,14 @@ public class Equipo {
 	private Entrenador entrenador;
 	private ArrayList<Deportista> jugadores;
 
+	public Equipo(Entrenador entrenador) {
+		this.entrenador = entrenador;
+	}
+
 	public String getDeporte() {
 		return this.deporte;
 	}
 
-	/**
-	 * 
-	 * @param deporte
-	 */
 	public void setDeporte(String deporte) {
 		this.deporte = deporte;
 	}
@@ -25,10 +25,6 @@ public class Equipo {
 		return this.entrenador;
 	}
 
-	/**
-	 * 
-	 * @param entrenador
-	 */
 	public void setEntrenador(Entrenador entrenador) {
 		this.entrenador = entrenador;
 	}
@@ -37,12 +33,17 @@ public class Equipo {
 		return this.jugadores;
 	}
 
-	/**
-	 * 
-	 * @param jugadores
-	 */
 	public void setJugadores(ArrayList<Deportista> jugadores) {
 		this.jugadores = jugadores;
 	}
 
+    public boolean registrarEntrenador(Entrenador coach) {
+		if (entrenador.getNombre().equals(coach.getNombre())) {
+			System.out.println("Coach ya registrado");
+			return false;
+		}
+
+		this.entrenador = coach;
+		return true;
+	}
 }

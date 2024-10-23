@@ -23,10 +23,6 @@ public class Partido {
 		return this.equipoLocal;
 	}
 
-	/**
-	 * 
-	 * @param equipoLocal
-	 */
 	public void setEquipoLocal(String equipoLocal) {
 		this.equipoLocal = equipoLocal;
 	}
@@ -35,10 +31,6 @@ public class Partido {
 		return this.equipoVisitante;
 	}
 
-	/**
-	 * 
-	 * @param equipoVisitante
-	 */
 	public void setEquipoVisitante(String equipoVisitante) {
 		this.equipoVisitante = equipoVisitante;
 	}
@@ -47,10 +39,6 @@ public class Partido {
 		return this.resultadoFinal;
 	}
 
-	/**
-	 * 
-	 * @param resultadoFinal
-	 */
 	public void setResultadoFinal(String resultadoFinal) {
 		this.resultadoFinal = resultadoFinal;
 	}
@@ -59,10 +47,6 @@ public class Partido {
 		return this.fechaPartido;
 	}
 
-	/**
-	 * 
-	 * @param fechaPartido
-	 */
 	public void setFechaPartido(String fechaPartido) {
 		this.fechaPartido = fechaPartido;
 	}
@@ -71,12 +55,7 @@ public class Partido {
 		return this.cancha;
 	}
 
-	/**
-	 * 
-	 * @param cancha
-	 */
 	public void setCancha(Cancha cancha) {
 		this.cancha = cancha;
 	}
-
 }

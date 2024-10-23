@@ -19,10 +19,6 @@ public class Deportista {
 		return this.apellido;
 	}
 
-	/**
-	 * 
-	 * @param apellido
-	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
@@ -31,10 +27,6 @@ public class Deportista {
 		return this.contacto;
 	}
 
-	/**
-	 * 
-	 * @param contacto
-	 */
 	public void setContacto(String contacto) {
 		this.contacto = contacto;
 	}
@@ -43,18 +35,11 @@ public class Deportista {
 		return this.deporte;
 	}
 
-	/**
-	 * 
-	 * @param deporte
-	 */
+
 	public void setDeporte(String deporte) {
 		this.deporte = deporte;
 	}
 
-	/**
-	 * 
-	 * @param equipo
-	 */
 	public boolean registrarEnEquipo(Equipo equipo) {
 		// TODO - implement Deportista.registrarEnEquipo
 		throw new UnsupportedOperationException();
