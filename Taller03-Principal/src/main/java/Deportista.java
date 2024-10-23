@@ -10,10 +10,7 @@ public class Deportista {
 		return this.nombre;
 	}
 
-	/**
-	 * 
-	 * @param nombre
-	 */
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}

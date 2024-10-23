@@ -10,6 +10,15 @@ public class Partido {
 	private String fechaPartido;
 	private Cancha cancha;
 
+	public Partido(String equipoLocal, String equipoVisitante, String resultadoFinal,
+				   String fechaPartido, Cancha cancha) {
+		this.equipoLocal = equipoLocal;
+		this.equipoVisitante = equipoVisitante;
+		this.resultadoFinal = resultadoFinal;
+		this.fechaPartido = fechaPartido;
+		this.cancha = cancha;
+	}
+
 	public String getEquipoLocal() {
 		return this.equipoLocal;
 	}
